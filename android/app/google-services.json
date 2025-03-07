@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1049578695285",
+    "project_id": "what-bytes-task-app",
+    "storage_bucket": "what-bytes-task-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049578695285:android:b512f5ed4470fe08cb663c",
+        "android_client_info": {
+          "package_name": "com.example.what_bytes_task"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpPrpH7Zv-IGWeUtRuJpSzn9dg2HWzoEE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
