@@ -6,7 +6,7 @@ class Task {
   final String description;
   final DateTime dueDate;
   final String priority;
-  final bool isCompleted; // ✅ New field for completion status
+  final bool isCompleted; 
 
   Task({
     required this.id,
@@ -14,10 +14,10 @@ class Task {
     required this.description,
     required this.dueDate,
     required this.priority,
-    this.isCompleted = false, // ✅ Default to false
+    this.isCompleted = false, 
   });
 
-  /// Converts Task object to a Map for Firestore
+
   Map<String, dynamic> toMap() {
     return {
       'id': id,
@@ -25,11 +25,10 @@ class Task {
       'description': description,
       'dueDate': Timestamp.fromDate(dueDate),
       'priority': priority,
-      'isCompleted': isCompleted, // ✅ Added
+      'isCompleted': isCompleted, 
     };
   }
 
-  /// Creates a Task object from Firestore data
   factory Task.fromMap(Map<String, dynamic> map, String documentId) {
     return Task(
       id: documentId,
@@ -37,11 +36,11 @@ class Task {
       description: map['description'] ?? '',
       dueDate: (map['dueDate'] as Timestamp).toDate(),
       priority: map['priority'] ?? 'Medium',
-      isCompleted: map['isCompleted'] ?? false, // ✅ Default to false if null
+      isCompleted: map['isCompleted'] ?? false,
     );
   }
 
-  /// Creates a copy of the task with modified fields (used for updates)
+
   Task copyWith({
     String? id,
     String? title,
@@ -56,7 +55,7 @@ class Task {
       description: description ?? this.description,
       dueDate: dueDate ?? this.dueDate,
       priority: priority ?? this.priority,
-      isCompleted: isCompleted ?? this.isCompleted, // ✅ Allows updating `isCompleted`
+      isCompleted: isCompleted ?? this.isCompleted, 
     );
   }
 }
